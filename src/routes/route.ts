@@ -1,13 +1,20 @@
-import express from 'express';
+import { Router } from 'express';
+import { setAdmin, setTenant } from '../adapter/connectionManager';
 
-const tenantRoutes = express.Router();
-const adminRoutes = express.Router();
+const tenantRoutes = Router({ mergeParams: true });
+const adminRoutes = Router();
+
+tenantRoutes.use(setTenant());
+adminRoutes.use(setAdmin);
 
 // Admin Routes
-adminRoutes.use("/example", ()=> { return 1 });
-
+adminRoutes.get('/example', (_, res) => {
+  return res.json({ message: 'HELLO' });
+});
 
 // Tenant Routes
-tenantRoutes.use("/example", ()=> { return 1 });
+tenantRoutes.use('/example', (_, res) => {
+  return res.json({ message: 'HELLO' });
+});
 
-export  { tenantRoutes, adminRoutes }
+export { tenantRoutes, adminRoutes };

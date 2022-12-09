@@ -1,0 +1,11 @@
+# Generated
+
+node_modules
+.vscode
+dist
+
+# KEYS
+
+.env
+.env.development
+.env.production
