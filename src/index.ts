@@ -1,5 +1,5 @@
 import App from './app';
-import ApiRoute from './routes/api-v1/index.route';
+import ApiRoute from '@routes/index.route';
 
 const app = new App([new ApiRoute()]);
 
