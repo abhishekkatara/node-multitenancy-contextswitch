@@ -1,11 +1,26 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "esModuleInterop": true,
     "target": "es6",
     "moduleResolution": "node",
+    "outDir": "dist",
+    "baseUrl": "src",
+    "declaration": true,
+    "declarationMap": true,
+    "allowJs": true,
+    "checkJs": true,
+    "allowUmdGlobalAccess": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "outDir": "dist"
+    "strict": true,
+    "paths": {
+      "@/*": ["*"],
+      "@config/*": ["config/*"],
+      "@routes/*": ["routes/*"],
+      "@interfaces/*": ["interfaces/*"]
+    }
   },
   "lib": ["es2015"]
 }
