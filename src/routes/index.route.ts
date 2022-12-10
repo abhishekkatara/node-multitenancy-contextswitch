@@ -16,7 +16,7 @@ export default class ApiRoute implements Route {
   private readonly initializeRoutes = () => {
     const adminRoutes = new AdminRoute();
     const tenantRoutes = new TenantRoute();
-    this.router.use(`${this.path}${adminRoutes.path}`, adminRoutes.router);
-    this.router.use(`${this.path}${tenantRoutes.path}`, tenantRoutes.router);
+    this.router.use(`${this.path}`, adminRoutes.router);
+    this.router.use(`${this.path}`, tenantRoutes.router);
   };
 }

@@ -15,7 +15,10 @@ export default class AdminRoute implements Route {
   }
 
   private readonly initializeRoutes = () => {
-    this.router.use(setAdmin);
-    this.router.use('/example', this.adminController.exampleRequest);
+    this.router.use(`${this.path}`, setAdmin);
+    this.router.use(
+      `${this.path}/example`,
+      this.adminController.exampleRequest
+    );
   };
 }
