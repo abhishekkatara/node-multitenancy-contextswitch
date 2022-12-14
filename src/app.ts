@@ -7,7 +7,6 @@ import express from 'express';
 import cookieParser from 'cookie-parser';
 import path from 'path';
 import compression from 'compression';
-// @ts-ignore
 import xss from 'xss-clean';
 import { Server, IncomingMessage, ServerResponse } from 'http';
 // ==========================================

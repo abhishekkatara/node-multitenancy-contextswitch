@@ -16,11 +16,15 @@
     "sourceMap": true,
     "strict": true,
     "paths": {
+      "*": ["customTypes/*"],
       "@/*": ["*"],
       "@config/*": ["config/*"],
       "@routes/*": ["routes/*"],
-      "@interfaces/*": ["interfaces/*"]
+      "@interfaces/*": ["interfaces/*"],
+      "@lib/*": ["lib/*"]
     }
   },
-  "lib": ["es2015"]
+  "lib": ["es2015"],
+  "include": ["src"],
+  "exclude": ["src/customTypes"]
 }
